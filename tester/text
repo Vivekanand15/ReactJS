@@ -1,0 +1,36 @@
+We are going to make app
+
+there is two chalange 
+1. if the user in nothern hemispere and between October and march
+or if the user in southern hemisphere and between march and October
+then it show the other content
+
+
+2. if the user in southern hemispere and between October and march
+or if the user in nothern hemisphere and between march and October
+then it show the other content
+
+
+App chalange
+1.need to get the user physical location
+2. need to determine the current month
+3.need to change text and styling based on 
+Location and month
+
+
+
+we are going to make two component 
+App -  has code to determine location and month
+SeasonDisplay- show the different text.icons based on props
+
+
+for getting the user geographical location we are using Source on MDN
+APIs-   
+
+         window.navigator.geolocation.getCurrentPosition(
+        (position)=>console.log(position),    #this run  when we able to find the location
+        (err)=>console.log(err)    #this show when it not able to detect the location
+    ); 
+
+in this when we are want to get the geolocation then it take time 
+there no way to wait in functional component 
