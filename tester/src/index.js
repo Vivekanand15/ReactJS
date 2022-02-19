@@ -16,8 +16,8 @@ class App extends React.Component{
                 position=>this.setState({ lat :position.coords.latitude}),
                 err=>this.setState({errMessage:err.message})
             );
-        }
-    render(){
+        };
+    renderContent=()=>{
         if(this.state.errMessage && !this.state.lat){
             return <div>Error:{this.state.errMessage}</div>;
         }
@@ -25,6 +25,13 @@ class App extends React.Component{
             return <SeasonDispaly lat={this.state.lat}/>;
         }
         return <Spinner message="Please accept the Location request"/>;
+    }
+    render(){
+        return (
+            <div className='border red'>
+                {this.renderContent()}
+            </div>
+        )
     }
 }
 
