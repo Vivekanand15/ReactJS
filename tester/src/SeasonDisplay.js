@@ -1,3 +1,4 @@
+import './seasonDisplay.css';
 import React from "react";
 import ReactDOM from "react";
 
@@ -23,10 +24,10 @@ const getSeason=(lat,month)=>{
 const SeasonDispaly=(props)=>{
     const season=getSeason(props.lat,new Date().getTime());
     const {text,iconName}=seasonConfig[season];
-    return <div>
-        <i className={`${iconName} icon`} />
+    return <div className={`${season} season-display`}>
+        <i className={`${iconName} icon massive icon-left`} />
         <h1>{text}</h1>
-        <i className={`${iconName} icon`} />
+        <i className={`${iconName} icon massive icon-right`} />
 
 
     </div>
