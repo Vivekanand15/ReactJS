@@ -3,12 +3,12 @@ import ReactDOM  from 'react-dom';
 import SeasonDispaly from './SeasonDisplay';
 
 class App extends React.Component{
-    constructor(props){
-        super(props);
-        
-        // this is the only time we do direct Assignment
-        // this.state={lat:null, errMessage:""};
-    };
+    // constructor(props){
+    //     super(props);
+
+    //     // this is the only time we do direct Assignment
+    //     // this.state={lat:null, errMessage:""};
+    // };
     state={lat:null ,errMessage:""};
     componentDidMount(){
             window.navigator.geolocation.getCurrentPosition(
