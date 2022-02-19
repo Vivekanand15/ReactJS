@@ -7,16 +7,13 @@ class App extends React.Component{
         super(props);
         // this is the only time we do direct Assignment
         this.state={lat:null, errMessage:""};
-
-        window.navigator.geolocation.getCurrentPosition(
-            position=>{
-                this.setState({ lat :position.coords.latitude});
-            },
-            err=>{
-                this.setState({errMessage:err.message})
-            }
-        );
-    }
+    };
+    componentDidMount(){
+            window.navigator.geolocation.getCurrentPosition(
+                position=>this.setState({ lat :position.coords.latitude}),
+                err=>this.setState({errMessage:err.message})
+            );
+        }
     render(){
         if(this.state.lat && !this.state.errMessage){
             return <div>Latitude:{this.state.lat}</div>
