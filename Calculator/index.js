@@ -81,5 +81,4 @@ for(item of button){
             result.value=updateTextBox;
         }
     })
-    hello how are you
 }
